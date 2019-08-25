@@ -1,0 +1,65 @@
+{
+  "name": "bikram-sambat-js",
+  "version": "1.0.0",
+  "description": "Utility library to convert date in AD to Nepali date BS (Bikram sambat) and vice versa.",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "clean-modules": "rimraf node_modules",
+    "clean": "rimraf dist npm-debug.log* yarn-error.log*",
+    "build:example": "cd ./examples && yarn && yarn build",
+    "watch:example": "yarn --cwd ./examples start",
+    "build:plugin": "yarn clean && rollup -c",
+    "watch:plugin": "rollup -c --watch",
+    "build": "npm-run-all build:*",
+    "start": "npm-run-all -p watch:*",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "echo 'yarn build'",
+    "prepublishOnly": "yarn test && yarn lint",
+    "preversion": "yarn lint",
+    "version": "yarn format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:puncoz-official/bikram-sambat-js.git"
+  },
+  "keywords": [
+    "nepali",
+    "bikram sambat",
+    "gregerion",
+    "calender",
+    "bs",
+    "ad"
+  ],
+  "author": "Puncoz Nepal <info@puncoz.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/puncoz-official/bikram-sambat-js/issues"
+  },
+  "homepage": "https://github.com/puncoz-official/bikram-sambat-js",
+  "devDependencies": {
+    "@types/jest": "^24.0.17",
+    "jest": "^24.9.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.18.2",
+    "rimraf": "^3.0.0",
+    "rollup": "^1.19.4",
+    "rollup-plugin-commonjs": "^10.0.2",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-typescript2": "^0.22.1",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.5.3"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "dependencies": {}
+}
