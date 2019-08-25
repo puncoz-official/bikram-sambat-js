@@ -2,7 +2,7 @@
 
 Utility library to convert date in AD (Gregorian) to Nepali date format BS (Bikram sambat) and vice versa.
 
-[![Version](https://img.shields.io/npm/v/nepali-number?logo=npm)](https://www.npmjs.com/package/bikram-sambat-js)
+[![Version](https://img.shields.io/npm/v/bikram-sambat-js?logo=npm)](https://www.npmjs.com/package/bikram-sambat-js)
 [![Twitter Follow](https://img.shields.io/twitter/follow/PuncozNepal?label=Follow&style=social)](https://twitter.com/PuncozNepal)
 
 ## Installation
