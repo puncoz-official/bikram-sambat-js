@@ -1,6 +1,6 @@
 {
   "name": "bikram-sambat-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utility library to convert date in AD to Nepali date BS (Bikram sambat) and vice versa.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",

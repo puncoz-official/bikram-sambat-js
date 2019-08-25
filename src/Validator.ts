@@ -50,5 +50,4 @@ export default class Validator {
             throw new RangeError("BS day should be in range of 1 to 32")
         }
     }
-
 }
