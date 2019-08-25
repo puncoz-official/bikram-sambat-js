@@ -189,7 +189,7 @@ export default class BikramSambat {
         const [year, month, day]: number[] = date
             .replace(/\//g, "-")
             .split("-")
-            .map(d => parseInt(d))
+            .map(d => Math.floor(Number(d)))
 
         return { year, month, day }
     }
