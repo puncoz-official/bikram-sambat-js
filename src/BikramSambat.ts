@@ -102,9 +102,9 @@ export default class BikramSambat {
         } else if (bsYear === 2085 && bsMonth > 5) {
             totalDays += bsDay - 2
         } else if (bsYear === 2081 && bsMonth === 3) {
-            totalDays += bsDay + 1;
+            totalDays += bsDay + 1
         } else if (bsYear === 2081 && bsMonth === 12) {
-            totalDays += bsDay - 1;
+            totalDays += bsDay - 1
         } else if (bsYear > 2088) {
             totalDays += bsDay - 4
         } else if (bsYear === 2088 && bsMonth > 5) {
@@ -180,13 +180,13 @@ export default class BikramSambat {
                 if ((bsYear === 2085 && bsMonth === 5) || (bsYear === 2088 && bsMonth === 5)) {
                     return Config.bsMonthTotalDaysCount[bsMonth - 1][monthTotalDaysCountIndex] - 2
                 } else if (bsYear === 2081 && bsMonth === 2) {
-                    return Config.bsMonthTotalDaysCount[bsMonth - 1][monthTotalDaysCountIndex + 1];
+                    return Config.bsMonthTotalDaysCount[bsMonth - 1][monthTotalDaysCountIndex + 1]
                 } else if (bsYear === 2081 && bsMonth === 3) {
-                    return Config.bsMonthTotalDaysCount[bsMonth - 1][monthTotalDaysCountIndex - 1];
+                    return Config.bsMonthTotalDaysCount[bsMonth - 1][monthTotalDaysCountIndex - 1]
                 } else if (bsYear === 2081 && bsMonth === 11) {
-                    return Config.bsMonthTotalDaysCount[bsMonth - 1][monthTotalDaysCountIndex] - 1;
+                    return Config.bsMonthTotalDaysCount[bsMonth - 1][monthTotalDaysCountIndex] - 1
                 } else if (bsYear === 2081 && bsMonth === 12) {
-                    return Config.bsMonthTotalDaysCount[bsMonth - 1][monthTotalDaysCountIndex] + 1;
+                    return Config.bsMonthTotalDaysCount[bsMonth - 1][monthTotalDaysCountIndex] + 1
                 } else {
                     return Config.bsMonthTotalDaysCount[bsMonth - 1][monthTotalDaysCountIndex]
                 }
