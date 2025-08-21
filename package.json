@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:puncoz-official/bikram-sambat-js.git"
+    "url": "git@github.com:puncoz-official/bikram-sambat-js.git"
   },
   "keywords": [
     "nepali",
