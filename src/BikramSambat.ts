@@ -90,9 +90,11 @@ export default class BikramSambat {
      */
     private totalDaysSince(): number {
         const { year: bsYear, month: bsMonth, day: bsDay } = this.date
-
+        const extraMonthDays2082 = new Set([2, 4, 7, 8, 10]);
         let totalDays = 0
         const diffInYears = bsYear - Config.minBSYear
+        
+
         for (let i = 1; i <= 12; i++) {
             totalDays += this.totalMonthDaysSince(i, i < bsMonth ? diffInYears + 1 : diffInYears)
         }
@@ -109,7 +111,9 @@ export default class BikramSambat {
             totalDays += bsDay - 4
         } else if (bsYear === 2088 && bsMonth > 5) {
             totalDays += bsDay - 4
-        } else {
+        }else if(bsYear === 2082 && extraMonthDays2082.has(bsMonth)){
+            totalDays += bsDay + 1
+        }else {
             totalDays += bsDay
         }
 
