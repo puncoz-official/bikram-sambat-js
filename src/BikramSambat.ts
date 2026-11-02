@@ -112,6 +112,8 @@ export default class BikramSambat {
             totalDays += bsDay - 4
         } else if (bsYear === 2082 && extraMonthDays2082.has(bsMonth)) {
             totalDays += bsDay + 1
+        } else if (bsYear === 2083 && bsMonth >= 7) {
+            totalDays += bsDay + 1
         } else {
             totalDays += bsDay
         }
@@ -190,6 +192,8 @@ export default class BikramSambat {
                     return Config.bsMonthTotalDaysCount[bsMonth - 1][monthTotalDaysCountIndex] - 1
                 } else if (bsYear === 2081 && bsMonth === 12) {
                     return Config.bsMonthTotalDaysCount[bsMonth - 1][monthTotalDaysCountIndex] + 1
+                } else if (bsYear === 2083 && bsMonth === 6) {
+                    return 31
                 } else {
                     return Config.bsMonthTotalDaysCount[bsMonth - 1][monthTotalDaysCountIndex]
                 }
